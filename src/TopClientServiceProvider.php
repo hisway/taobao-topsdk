@@ -1,5 +1,5 @@
 <?php
-namespace EasyLaravel\TopClient;
+namespace Hisway\TopClient;
 
 use Illuminate\Foundation\Application as LaravelApplication;
 use Laravel\Lumen\Application as LumenApplication;

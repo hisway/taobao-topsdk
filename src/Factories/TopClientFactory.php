@@ -1,5 +1,6 @@
 <?php
-namespace EasyLaravel\TopClient\Factories;
+
+namespace Hisway\TopClient\Factories;
 
 use TopClient\TopClient;
 

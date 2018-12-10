@@ -1,4 +1,6 @@
-<?php namespace EasyLaravel\TopClient\Facades;
+<?php 
+
+namespace Hisway\TopClient\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

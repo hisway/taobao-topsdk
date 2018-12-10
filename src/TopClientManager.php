@@ -1,7 +1,7 @@
 <?php
-namespace EasyLaravel\TopClient;
+namespace Hisway\TopClient;
 
-use EasyLaravel\TopClient\Factories\TopClientFactory;
+use Hisway\TopClient\Factories\TopClientFactory;
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
 

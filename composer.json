@@ -1,13 +1,13 @@
 {
-    "name": "easylarvel/taobao-top-client",
+    "name": "hisway/top-sdk",
     "type": "library",
     "description": "Taobao top client(SDK) for laravel 5.*",
-    "keywords": ["taobao", "laravel", "sdk", "api"],
+    "keywords": ["taobao", "top", "laravel", "sdk", "api"],
     "license": "MIT",
     "authors": [
         {
-            "name": "cs686",
-            "email": "cs686@126.com"
+            "name": "hisway",
+            "email": "hisway@qq.com"
         }
     ],
     "minimum-stability": "dev",
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "EasyLaravel\\TopClient\\": "src/",
+            "Hisway\\TopClient\\": "src/",
             "TopClient\\": "src/top/"
         }
     }

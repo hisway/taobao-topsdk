@@ -4,11 +4,11 @@
 
 ## laravel
 ### 安装
-`composer require EasyLaravel/taobao-top-client`
+`composer require hisway/top-sdk`
 ### 配置
-* 在config/app.php中的providers数组中添加`EasyLaravel\TopClient\TopClientServiceProvider::class,`
-* 在config/app.php中的aliases数组中添加`'TopClient' => EasyLaravel\TopClient\Facades\TopClient::class,`
-* 执行 `php artisan vendor:publish --provider="EasyLaravel\TopClient\TopClientServiceProvider"` 生成配置文件
+* 在config/app.php中的providers数组中添加`Hisway\TopClient\TopClientServiceProvider::class,`
+* 在config/app.php中的aliases数组中添加`'TopClient' => Hisway\TopClient\Facades\TopClient::class,`
+* 执行 `php artisan vendor:publish --provider="Hisway\TopClient\TopClientServiceProvider"` 生成配置文件
 * 编辑.env文件，设置appid,appsecret
 ### 示例代码
 ```php
@@ -28,16 +28,16 @@ dd($resp);
 
 ## lumen
 ### 安装
-`composer require EasyLaravel/taobao-top-client`
+`composer require Hisway/taobao-top-client`
 
 ### 配置
-* 手动复制vendor/EasyLaravel/taobao-top-client/config/taobaotop.php到config目录下
+* 手动复制vendor/Hisway/taobao-top-client/config/taobaotop.php到config目录下
 * 在bootstrap/app.php下添加
 ```php
 if (!class_exists('TopClient')) {
-    class_alias('EasyLaravel\TopClient\Facades\TopClient', 'TopClient');
+    class_alias('Hisway\TopClient\Facades\TopClient', 'TopClient');
 }
-$app->register(EasyLaravel\TopClient\TopClientServiceProvider::class);
+$app->register(Hisway\TopClient\TopClientServiceProvider::class);
 ```
 * 编辑.env文件，设置appid,appsecret
 
