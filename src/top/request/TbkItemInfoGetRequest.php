@@ -1,43 +1,42 @@
 <?php
-
+/**
+ * TOP API: taobao.tbk.item.info.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2018.11.10
+ */
 namespace TopClient\request;
 
 use TopClient\RequestCheckUtil;
 
-/**
- * TOP API: taobao.tbk.item.info.get request
- *
- * @author auto create
- * @since 1.0, 2016.01.05
- */
 class TbkItemInfoGetRequest
 {
-	/**
-	 * 需返回的字段列表
+	/** 
+	 * ip地址，影响邮费获取，如果不传或者传入不准确，邮费无法精准提供
 	 **/
-	private $fields;
-
-	/**
-	 * 商品ID串，用,分割，从taobao.tbk.item.get接口获取num_iid字段，最大40个
+	private $ip;
+	
+	/** 
+	 * 商品ID串，用,分割，最大40个
 	 **/
 	private $numIids;
-
-	/**
+	
+	/** 
 	 * 链接形式：1：PC，2：无线，默认：１
 	 **/
 	private $platform;
-
+	
 	private $apiParas = array();
-
-	public function setFields($fields)
+	
+	public function setIp($ip)
 	{
-		$this->fields = $fields;
-		$this->apiParas["fields"] = $fields;
+		$this->ip = $ip;
+		$this->apiParas["ip"] = $ip;
 	}
 
-	public function getFields()
+	public function getIp()
 	{
-		return $this->fields;
+		return $this->ip;
 	}
 
 	public function setNumIids($numIids)
@@ -66,19 +65,18 @@ class TbkItemInfoGetRequest
 	{
 		return "taobao.tbk.item.info.get";
 	}
-
+	
 	public function getApiParas()
 	{
 		return $this->apiParas;
 	}
-
+	
 	public function check()
 	{
-
-		RequestCheckUtil::checkNotNull($this->fields,"fields");
+		
 		RequestCheckUtil::checkNotNull($this->numIids,"numIids");
 	}
-
+	
 	public function putOtherTextParam($key, $value) {
 		$this->apiParas[$key] = $value;
 		$this->$key = $value;
