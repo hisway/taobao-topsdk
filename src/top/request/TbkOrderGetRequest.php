@@ -1,4 +1,7 @@
 <?php
+namespace TopClient\request;
+
+use TopClient\RequestCheckUtil;
 /**
  * TOP API: taobao.tbk.order.get request
  * 
