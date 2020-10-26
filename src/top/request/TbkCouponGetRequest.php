@@ -1,7 +1,7 @@
 <?php
+
 namespace TopClient\request;
 
-use TopClient\RequestCheckUtil;
 /**
  * TOP API: taobao.tbk.coupon.get request
  * 
